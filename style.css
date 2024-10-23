@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  font-family: sans-serif;
+  background-color: #f0f2f5;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 150px;
+  margin-top: 150px;
+}
+.container .col:nth-of-type(1) > h1 {
+  font-size: 45px;
+  color: blue;
+  margin: 0;
+  margin-top: 2px;
+}
+.container .col:nth-of-type(1) > h2 {
+  font-size: 20px;
+  color: rgba(128, 128, 128, 0.844);
+  margin: 0;
+}
+.container .col:nth-of-type(1) > p {
+  font-size: 16px;
+  color: rgb(115, 115, 115);
+}
+.container .col:nth-of-type(1) .img {
+  width: 150px;
+  height: 150px;
+}
+.container .account-1 > .img {
+  background-size: cover;
+  background-image: url(/Pagefb/images/0b49112e-bce7-42b2-b357-9bca52c01e1c.jpeg);
+  border-radius: 10px 10px 0px 0px;
+}
+
+.container .profil-container {
+  display: flex;
+  gap: 20px;
+}
+.container .col:nth-of-type(1) .texte {
+  width: 150px;
+  padding: 10px;
+  background-color: red;
+  text-align: center;
+}
+.container .account-1,
+.container .account-2 {
+  /*overflow: hidden;*/
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.container .account-2 .img {
+  background-size: cover;
+  background-image: url(/Pagefb/images/image.png);
+}
+.container .account-1 {
+  position: relative;
+}
+
+.container .account-1 span {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  color: white;
+  background-color: red;
+  border-radius: 50%;
+  padding: 5px;
+}
+.container .account-1 > i {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 18px;
+  height: 18px;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  background-color: rgb(83, 83, 83);
+  text-align: center;
+  line-height: 1.2;
+  transition: 0.5s;
+}
+.container .img {
+  border-radius: 10px 10px 0px 0px;
+}
+.container .texte {
+  border-radius: 0px 0px 10px 10px;
+}
+
+.container .account-1:hover i {
+  transform: scale(1.4) translateX(-5px);
+  color: gray;
+  background-color: white;
+}
+.container .account-1:hover {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+.container .col:nth-of-type(2) .card {
+  background-color: white;
+  transform: translatey(3%);
+  padding: 20px;
+  border-radius: 10px;
+}
+.container .col:nth-of-type(2) form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.container .col:nth-of-type(2) form input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(137, 137, 137);
+  outline: none;
+}
+
+.container .col:nth-of-type(2) form input[type="texte"] :focus {
+  border-color: blue;
+}
+
+.container .col:nth-of-type(2) form input[type="submit"] {
+  background-color: #1877f2;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.4s :ease-in-out;
+}
+.container .col:nth-of-type(2) form input[type="submit"]:active{
+  transform: scale(0.97);
+}
+
+.container form + a {
+  text-align: center;
+  display: block;
+  margin: 10px;
+  text-decoration: none;
+  font-size: 14px;
+}
+.container .col:nth-of-type(2) button {
+  width: 80%;
+  padding: 10px;
+  border: none;
+  background-color: green;
+  border-radius: 6px;
+  color: white;
+  margin: 10px;
+}
+.card {
+  text-align: center;
+}
+hr {
+  height: 1px;
+  border: none;
+  background-color: #00000026;
+}
+#entreprise {
+  display: block;
+  text-align: center;
+  align-items: center;
+}
+/*de à 600px*/
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+    margin-top: 20px;
+  }
+}
+/*de 600 a 800px*/
+@media (max-width: 800px) {
+  .container {
+    gap: 30px;
+  }
+}
